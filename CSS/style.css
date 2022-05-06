@@ -14,6 +14,11 @@ body{
     height: 50px;
     background-color: black;
 }
+@media screen and (max-width:768px) {
+    .container-fluid{
+        display: none;
+    }
+}
 
 
 /*      MediaQuery    */
@@ -82,11 +87,7 @@ body{
     .col-xl-12 {width: 100%;}
 }
 /*              head            */
-.icon-navbar{
-    width: 50px;
-    display: inline-block;
-    float: left;
-}
+
 .menu{
     width: 50%;
     height: 50px;
@@ -102,6 +103,7 @@ body{
     margin: 20px 50px;
 }
 .menu a{
+    font-size: 20px;
     text-decoration: none;
     color: greenyellow;
 }
@@ -132,27 +134,91 @@ body{
         margin-top: 50px;
     }
 }
-
-/*          container        */
-.container{
-    max-width: 1400px;
-    height: 1700px;
-    display: flex;
-    margin: 100px auto;
-    color: aliceblue;
+/*          Sidebar          */
+.sidebar{
+    width: 40px;
+    height: 600px;
+    margin-top: 70px;
+    display: inline-block;
+    position: fixed;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.562);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.sidebar li{
+    margin-bottom: 30px;
+}
+.sidebar li img:hover{
+    cursor: pointer;
+    animation:animate__bounce 0.7s ;
+}
+
+@keyframes animate__bounce {
+    from{
+        transform: rotate();
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@media screen and (max-width:568px) {
+   .sidebar{
+    display: none;
+   }
+}
+.icon-codepen{
+    width: 70px;
+}
+/*          container        */
+.container{
+    max-width: 1000px;
+    height: 1200px;
+    /* display: inline-block; */
+    margin:200px  auto;
+    color: aliceblue;
+    /* backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.562); */
+   
 }
 .casrds{
     width: 100%;
-    height: 500px;
+    height: 400px;
+    padding: 5px;
     border:  solid 1px rgba(255, 255, 255, 0.212);
     border-radius: 5px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.373);
+   
 }
 .casrds img{
     max-width: 100%;
     height: auto;
+    display:inline-block;
+    position:relative;
+  
+}
+@media screen and (max-width:1145px) {
+    .casrds{
+        width: 70%;
+        margin: 0 auto 1px;
+    }
+}
+@media screen and (max-width:768px) {
+    .casrds{
+        width: 70%;
+        margin: 10px auto ;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .casrds img{
+        width: 50%;
+    }
+}
+@media screen and (max-width:568px) {
+    .casrds{
+        width: 70%;
+    }
 }
