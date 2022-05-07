@@ -141,12 +141,28 @@ body{
       text-shadow: none;
     }
   }
+@media screen and (max-width:768px) {
+    .head h3{
+        font-size: 120px;
+
+    }
+}  
+@media screen and (max-width:569px) {
+    .head {
+        text-align: center;
+    }
+}  
 .card-image{
     width: 200px;
     height: 300px;
     margin: 100px ;
     border: solid 2px wheat;
    
+}
+@media screen and (max-width:400px) {
+    .card-image{
+        margin: auto;
+    }
 }
 
   @keyframes moveGradient {
@@ -176,9 +192,9 @@ body{
     margin-top: 70px;
     display: inline-block;
     position: fixed;
-    backdrop-filter: blur(16px) saturate(180%);
+    /* backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.562);
+    background-color: rgba(17, 25, 40, 0.562); */
 }
 .sidebar li{
     margin-bottom: 30px;
@@ -186,6 +202,9 @@ body{
 .sidebar li img:hover{
     cursor: pointer;
     animation:animate__bounce 0.7s ;
+}
+.sidebar .cards .js{
+    border-radius: 25px;
 }
 
 @keyframes animate__bounce {
@@ -233,6 +252,18 @@ body{
     display:inline-block;
     position:relative;
   
+}
+.sidebar .icon-html{
+    margin-top: 50px;
+}
+.sidebar .icon-css{
+    margin-top: -20px;
+}
+.sidebar .js-icon{
+    margin-top: 200px;
+}
+.sidebar p{
+    padding: 5px;
 }
 @media screen and (max-width:1145px) {
     .casrds{
