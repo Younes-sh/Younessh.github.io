@@ -327,6 +327,7 @@ body{
 }
 
 /*      Media Query for Responsive  */
+
 .btn-menu{
     margin: 25px;
     border: none;
@@ -342,6 +343,15 @@ body{
 .open::before{
     content: '\002630';
     color: #0fa;
+}
+.menu-burger{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(65, 116, 161);
+  
+}
+.visibleHiden{
+    visibility: hidden;
 }
 @media screen and (max-width:1145px) {
     .casrds{
