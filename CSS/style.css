@@ -148,6 +148,19 @@ body{
     border: solid 2px wheat;
    
 }
+.gradient-border{
+    width: 100%;
+    height: 100%;
+    /* background-color: #0fa; */
+}
+.gradient-border img{
+    max-width: 151px;
+    height: auto;
+    float: right;
+    mix-blend-mode: luminosity;
+    color: rgba(20, 19, 19, 0.925);
+    transform: scaleX(-1);
+}
 
   @keyframes moveGradient {
     50% {
@@ -178,7 +191,7 @@ body{
     position: fixed;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.562);
+    /* background-color: rgba(17, 25, 40, 0.562); */
 }
 .sidebar li{
     margin-bottom: 30px;
@@ -206,33 +219,129 @@ body{
 }
 /*          container        */
 .container{
-    max-width: 1000px;
+    max-width: 1200px;
     height: 1200px;
-    /* display: inline-block; */
     margin:200px  auto;
     color: aliceblue;
-    /* backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.562); */
-   
 }
+
 .casrds{
-    width: 100%;
+    width: 280px;
     height: 400px;
-    padding: 5px;
+    margin: auto;
+    padding: 25px 30px;
+    text-align: center;
     border:  solid 1px rgba(255, 255, 255, 0.212);
     border-radius: 5px;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.373);
-   
+    cursor: pointer;
 }
 .casrds img{
-    max-width: 100%;
+    max-width: 200px;
     height: auto;
     display:inline-block;
     position:relative;
-  
+    margin-bottom: 20px;
+}
+.container .percents{
+    width: 80%;
+    height: 5px;
+    margin:10px auto ;
+    border: solid 1px;
+}
+.percent-html{
+    height: 4px;
+    animation: progresHTML 1s forwards;
+}
+.percent-html:hover{
+    height: 4px;
+    animation: progresHTML 1s forwards;
+}
+@keyframes progresHTML {
+    from{
+        width: 0;
+    }
+    to{
+        width: 50%;
+    background-color: rgb(255, 153, 0);
+
+    }
+}
+.percent-css{
+    height: 4px;
+    animation: progresCSS 1.5s forwards;
+}
+@keyframes progresCSS {
+    from{
+        width: 0;
+    }
+    to{
+        width: 50%;
+        background-color: rgb(0, 60, 255);
+
+    }
+}
+.percent-git{
+    height: 4px;
+    animation: progresGit 2s forwards;
+}
+
+
+@keyframes progresGit {
+    from{
+        width: 0;
+    }
+    to{
+        width: 20%;
+        background-color: rgb(143, 69, 218);
+    }
+}
+.percent-js{
+    height: 4px;
+    animation: progresJS 2.5s forwards;
+}
+@keyframes progresJS {
+    from{
+        width: 0;
+    }
+    to{
+        width: 30%;
+        background-color: yellow;
+    }
+}
+.percent-color{
+    animation: changecolor 8s;
+}
+@keyframes changecolor  {
+    0%{
+        color: transparent;
+    }
+    50%{
+        color: lightblue;
+    }
+    100%{
+        color: #fff;
+    }
+}
+
+/*      Media Query for Responsive  */
+.btn-menu{
+    margin: 25px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close::before{
+    content: '\002716  Close';
+    color: rgb(138, 63, 63);
+}
+.open::before{
+    content: '\002630';
+    color: #0fa;
 }
 @media screen and (max-width:1145px) {
     .casrds{
@@ -252,8 +361,70 @@ body{
         width: 50%;
     }
 }
+
+@media screen and (max-width:1326px) {
+    .casrds{
+        width: 240px;
+        height: 400px;
+        padding: 40px;
+    }
+    .sidebar{
+        display: none;
+    }
+    .head {
+        margin: 150px 20px;
+    }
+   
+}
+@media screen and (min-width:1326px) {
+    .container-menu-burger{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width:768px) {
+    .casrds{
+        width: 270px;
+        height: 200px;
+        padding: 40px;
+    }
+    .casrds .percents{
+        display: inline-block;
+        margin-top: 100px;
+    }
+    .casrds p{
+       margin-top:80px;
+    }
+    .card-image{
+        margin: auto;
+        margin-bottom: 50px;
+    }
+   
+}
 @media screen and (max-width:568px) {
     .casrds{
-        width: 70%;
+        width: 270px;
+        height: 200px;
+        padding: 40px;
     }
+    .casrds .percents{
+        display: inline-block;
+        margin-top: 100px;
+    }
+    .casrds p{
+       margin-top:80px;
+    }
+    .card-image {
+       
+    }
+   
+}
+@media screen and (max-width:412px) {
+   
+  .head{
+      display: none;
+  }
+  
 }
